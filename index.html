@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lunapark with WebGL</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container"></div>
+    <div class="controls">
+      <label for="rotationSpeed">Ferris Rotation Speed: </label>
+      <input
+        type="range"
+        id="rotationSpeed"
+        min="0"
+        max="0.02"
+        step="0.002"
+        value="0.005"
+      />
+      <label for="rotationDirection">Ferris Direction: </label>
+      <select id="rotationDirection">
+        <option value="1">Counterclockwise</option>
+        <option value="-1">Clockwise</option>
+      </select>
+      <label for="carouselRotationSpeed">Carousel Rotation Speed </label>
+      <input
+        type="range"
+        id="carouselRotationSpeed"
+        min="0"
+        max="0.02"
+        step="0.002"
+        value="0.005"
+      />
+
+      <!--<div id="rotationSpeedDisplay">Dönüş Hızı: 0 m/s</div>-->
+      <label for="sunIntensity">Sun Brightness: </label>
+      <input
+        type="range"
+        id="sunIntensity"
+        min="0"
+        max="50"
+        step="0.1"
+        value="1"
+      />
+      <!-- Şarkı Oynatıcı -->
+      <div id="audioPlayer">
+        <label for="myAudio">Dale-Don-Dale_Lunapark.mp3</label>
+        <audio id="myAudio" controls>
+          <source src="Don-Omar-Dale-Don-Dale.mp3" type="audio/mp3" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
